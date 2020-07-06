@@ -15,7 +15,7 @@
 .SUFFIXES:
 .SUFFIXES: .f .F .o .c .a .f90 .F90
 
-SIESTA_ARCH = grc 
+SIESTA_ARCH = linux_nacad
 
 CC = mpicc
 FPP = $(FC) -E -P
@@ -36,10 +36,6 @@ KINDS = $(SP_KIND) $(DP_KIND)
 LDFLAGS = -O2 -xHost -g -traceback -ftz -fp-speculation=safe -fp-model source \
           -L/sw/apps/intel19/compilers_and_libraries_2019.4.243/linux/compiler/lib/intel64_lin \
           -L/sw/apps/intel19/compilers_and_libraries_2019.4.243/linux/mkl/lib/intel64_lin
-#-L/opt/apps/util/easybuild/software/icc/2018.3.222-GCC-7.3.0-2.30/lib/intel64
-#-L/opt/apps/util/easybuild/software/imkl/2018.3.222-iimpi-2018b/lib
-#-L/opt/apps/util/easybuild/software/imkl/2018.3.222-iimpi-2018b/mkl/lib/intel64
-#-L/opt/apps/util/easybuild/software/netCDF-Fortran/4.4.4-intel-2018b/lib
 
 COMP_LIBS =  
 NETCDF_LIBS = 
@@ -49,8 +45,6 @@ WXML = libwxml.a
 FPPFLAGS = $(DEFS_PREFIX)-DFC_HAVE_ABORT -DMPI
 MPI_INTERFACE = libmpi_f90.a
 MPI_INCLUDE = .
-#FFTW_INCFLAGS = -I/sw/apps/intel17/compilers_and_libraries_2017.8.262/linux/mkl/include/fftw
-#FFTW_LIBS = -L/sw/apps/intel17/compilers_and_libraries_2017.8.262/linux/mkl/lib/intel64_lin -Wl,-Bstatic -Wl,--start-group -lfftw3xc_intel -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic
 
 LIBS = -Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic
 

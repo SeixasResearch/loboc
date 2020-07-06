@@ -1,6 +1,10 @@
-$ git clone https://github.com/phonopy/phonopy.git
-$ cd phonopy
-$ python3.6m setup.py install --user
+Para instalar o Phonopy no LoboC, podemos fazer:
+
+`$ git clone https://github.com/phonopy/phonopy.git`
+
+`$ cd phonopy`
+
+`$ python3.6m setup.py install --user`
 
 
 #####
