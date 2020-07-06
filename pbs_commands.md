@@ -2,19 +2,28 @@
 
 Verificar fila de jobs submetidos:
 
-`qstat`
+```bash
+$ qstat
+```
 
 
 Verificar fila de jobs submetidos do usuario yourusername:
 
-`qstat -u yourusername` 
+```bash
+$ qstat -u yourusername
+```
 
 
 Submeter job.sh:
 
-`qsub job.sh`
+```bash
+$ qsub job.sh
+```
 
 
-Deletar job da fila. Incluir jobid
+Deletar job da fila:
 
-`qdel 12345.service1`
+```bash
+$ qdel 12345.service1
+```
+Incluir o jobid. Por exemplo, 12345.service1
