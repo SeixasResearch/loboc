@@ -15,7 +15,7 @@
 .SUFFIXES:
 .SUFFIXES: .f .F .o .c .a .f90 .F90
 
-SIESTA_ARCH = linux_nacad
+SIESTA_ARCH = nacad_Intel2019
 
 CC = mpicc
 FPP = $(FC) -E -P

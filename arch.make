@@ -15,7 +15,7 @@
 .SUFFIXES:
 .SUFFIXES: .f .F .o .c .a .f90 .F90
 
-SIESTA_ARCH = loboc_intel_mpi 
+SIESTA_ARCH = nacad_intel_mpi 
 
 CC = mpicc
 FPP = $(FC) -E -P
@@ -70,5 +70,4 @@ state_analysis.o: state_analysis.F
 	$(FC) -c $(FFLAGS) $(INCFLAGS) $(FCFLAGS_fixed_f)  $<
 .f90.o:
 	$(FC) -c $(FFLAGS) $(INCFLAGS) $(FCFLAGS_free_f90)  $<
-
 
